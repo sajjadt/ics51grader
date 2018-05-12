@@ -1,3 +1,16 @@
+part1_expected_output = ["555555555", "02138A9B", "FDEC7564"]
+part2_expected_output = ["160000", "0", "-200"]
+
+
+def part1_grade(student_output):
+    return 50 - 15*[x != y for x,y in zip(part1_expected_output, student_output)].count(True)
+
+
+def part2_grade(student_output):
+    return 50 - 15 * [x != y for x, y in zip(part2_expected_output, student_output)].count(True)
+
+
+
 template = """
 #                                           ICS 51, Lab #1
 #
